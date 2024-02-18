@@ -29,14 +29,14 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v1
       with:
-        username: vergilgao
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
-        username: vergilgao
+        username: ${{ secrets.GHCR_USERNAME }}
         password: ${{ secrets.GHCR_TOKEN }}
 
     - name: Build and push
@@ -48,26 +48,26 @@ jobs:
         platforms: linux/amd64,linux/arm64
         push: true
         tags: |
-          vergilgao/mdc:${{ env.MAJOR_VERSION }}
-          vergilgao/mdc:${{ env.MINOR_VERSION }}
-          vergilgao/mdc:${{ env.BUILD_VERSION }}
-          vergilgao/mdc:${{ env.TAG_VERSION }}
-          vergilgao/mdc:latest
-          ghcr.io/vergilgao/mdc:${{ env.MAJOR_VERSION }}
-          ghcr.io/vergilgao/mdc:${{ env.MINOR_VERSION }}
-          ghcr.io/vergilgao/mdc:${{ env.BUILD_VERSION }}
-          ghcr.io/vergilgao/mdc:${{ env.TAG_VERSION }}
-          ghcr.io/vergilgao/mdc:latest
-          vergilgao/avdc:${{ env.MAJOR_VERSION }}
-          vergilgao/avdc:${{ env.MINOR_VERSION }}
-          vergilgao/avdc:${{ env.BUILD_VERSION }}
-          vergilgao/avdc:${{ env.TAG_VERSION }}
-          vergilgao/avdc:latest
+          frosty5689/mdc:${{ env.MAJOR_VERSION }}
+          frosty5689/mdc:${{ env.MINOR_VERSION }}
+          frosty5689/mdc:${{ env.BUILD_VERSION }}
+          frosty5689/mdc:${{ env.TAG_VERSION }}
+          frosty5689/mdc:latest
+          ghcr.io/frosty5689/mdc:${{ env.MAJOR_VERSION }}
+          ghcr.io/frosty5689/mdc:${{ env.MINOR_VERSION }}
+          ghcr.io/frosty5689/mdc:${{ env.BUILD_VERSION }}
+          ghcr.io/frosty5689/mdc:${{ env.TAG_VERSION }}
+          ghcr.io/frosty5689/mdc:latest
+          frosty5689/avdc:${{ env.MAJOR_VERSION }}
+          frosty5689/avdc:${{ env.MINOR_VERSION }}
+          frosty5689/avdc:${{ env.BUILD_VERSION }}
+          frosty5689/avdc:${{ env.TAG_VERSION }}
+          frosty5689/avdc:latest
         build-args: |
           VERSION=${{ env.BUILD_VERSION }}
           BUILD_DATE=${{ env.BUILD_DATE }}
-        cache-from: type=registry,ref=ghcr.io/vergilgao/mdc:buildcache
-        cache-to: type=registry,ref=ghcr.io/vergilgao/mdc:buildcache,mode=max
+        cache-from: type=registry,ref=ghcr.io/frosty5689/mdc:buildcache
+        cache-to: type=registry,ref=ghcr.io/frosty5689/mdc:buildcache,mode=max
     
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}    

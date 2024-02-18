@@ -64,14 +64,14 @@ RUN \
     && apt-get clean -y
 
 ARG MDC_SOURCE_VERSION
-ENV MDC_SOURCE_VERSION=${MDC_SOURCE_VERSION:-c3e5fdb09fefa11c614e519786e942b08b2a8fb0}
+ENV MDC_SOURCE_VERSION=${MDC_SOURCE_VERSION:-1cf26ca9de7a7cecb377388aa9fe416809b28610}
 
 ARG DLIB_WHL_DIR
 COPY --from=dlib-bin-builder $DLIB_WHL_DIR $DLIB_WHL_DIR
 
 RUN mkdir -p /tmp/mdc && cd /tmp/mdc \
     # get mdc source code
-    && wget -O- https://github.com/yoshiko2/Movie_Data_Capture/archive/$MDC_SOURCE_VERSION.tar.gz | tar xz -C /tmp/mdc --strip-components 1 \
+    && wget -O- https://github.com/frosty5689/Movie_Data_Capture/archive/$MDC_SOURCE_VERSION.tar.gz | tar xz -C /tmp/mdc --strip-components 1 \
     && python3 -m venv /opt/venv && . /opt/venv/bin/activate \
     && pip install --upgrade \
         pip \

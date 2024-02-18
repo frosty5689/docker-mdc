@@ -14,17 +14,17 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v2
 
-        - name: sync vergilgao/mdc
+        - name: sync frosty5689/mdc
           uses: ms-jpq/sync-dockerhub-readme@v1
           with:
-            username: vergilgao
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
-            repository: vergilgao/mdc
+            repository: frosty5689/mdc
             readme: README.md
-        - name: sync vergilgao/avdc
+        - name: sync frosty5689/avdc
           uses: ms-jpq/sync-dockerhub-readme@v1
           with:
-            username: vergilgao
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
-            repository: vergilgao/avdc
+            repository: frosty5689/avdc
             readme: README.md
