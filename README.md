@@ -26,6 +26,9 @@
 
 ## 更新日志
 
+20240218:
+* use latest 6.6.7 fork with patches to airav parser
+
 20230523:
 
 * 同步至上游 6.6.3
