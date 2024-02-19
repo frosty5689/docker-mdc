@@ -21,10 +21,3 @@ jobs:
             password: ${{ secrets.DOCKERHUB_TOKEN }}
             repository: frosty5689/mdc
             readme: README.md
-        - name: sync frosty5689/avdc
-          uses: ms-jpq/sync-dockerhub-readme@v1
-          with:
-            username: ${{ secrets.DOCKERHUB_USERNAME }}
-            password: ${{ secrets.DOCKERHUB_TOKEN }}
-            repository: frosty5689/avdc
-            readme: README.md
