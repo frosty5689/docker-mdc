@@ -58,11 +58,6 @@ jobs:
           ghcr.io/frosty5689/mdc:${{ env.BUILD_VERSION }}
           ghcr.io/frosty5689/mdc:${{ env.TAG_VERSION }}
           ghcr.io/frosty5689/mdc:latest
-          frosty5689/avdc:${{ env.MAJOR_VERSION }}
-          frosty5689/avdc:${{ env.MINOR_VERSION }}
-          frosty5689/avdc:${{ env.BUILD_VERSION }}
-          frosty5689/avdc:${{ env.TAG_VERSION }}
-          frosty5689/avdc:latest
         build-args: |
           VERSION=${{ env.BUILD_VERSION }}
           BUILD_DATE=${{ env.BUILD_DATE }}
