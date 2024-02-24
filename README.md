@@ -1,8 +1,8 @@
 # Movie Data Capture - Docker
 
-[github](https://github.com/VergilGao/docker-mdc) [![GitHub stars](https://img.shields.io/github/stars/VergilGao/docker-mdc)](https://github.com/VergilGao/docker-mdc/stargazers) | [dockerhub](https://hub.docker.com/r/vergilgao/mdc)
+[github](https://github.com/frosty5689/docker-mdc) [![GitHub stars](https://img.shields.io/github/stars/frosty5689/docker-mdc)](https://github.com/frosty5689/docker-mdc/stargazers) | [dockerhub](https://hub.docker.com/r/frosty5689/mdc)
 
-![release](https://github.com/VergilGao/docker-mdc/workflows/release/badge.svg) [![GitHub license](https://img.shields.io/github/license/VergilGao/docker-mdc)](https://github.com/VergilGao/docker-mdc/blob/master/LICENSE)
+![release](https://github.com/frosty5689/docker-mdc/workflows/release/badge.svg) [![GitHub license](https://img.shields.io/github/license/frosty5689/docker-mdc)](https://github.com/frosty5689/docker-mdc/blob/master/LICENSE)
 
 **数据无价，请谨慎操作！**
 
